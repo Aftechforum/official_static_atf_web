@@ -182,7 +182,7 @@ export default function Home() {
         </div>
         <div className="container mx-auto text-center relative z-10">
           <h1 className="text-5xl md:text-7xl font-extrabold font-poppins mb-6 leading-tight">
-            Empowering Africa's
+            {`Empowering Africa's`}
             <br />
             Next Generation of Innovators
           </h1>
@@ -421,8 +421,8 @@ export default function Home() {
               Join the ATF Network
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Connect with a community of innovators, access exclusive
-              resources, and shape Africa's tech future.
+              {`Connect with a community of innovators, access exclusive
+              resources, and shape Africa's tech future.`}
             </p>
           </div>
 
@@ -766,8 +766,8 @@ export default function Home() {
                 Our Mission
               </h3>
               <p className="text-gray-600">
-                To empower Africa's next generation of technology leaders and
-                innovators
+                {`To empower Africa's next generation of technology leaders and
+                innovators`}
               </p>
             </div>
             <div className="text-center p-8 bg-atf-offwhite rounded-lg">
@@ -985,8 +985,8 @@ export default function Home() {
                 Success Story
               </span>
               <h3 className="mt-2 text-3xl font-bold font-poppins text-gray-800 leading-tight">
-                From Challenge to Startup: How 'Agri-Detect' Secured Pre-Seed
-                Funding
+                From Challenge to Startup: How {`'Agri-Detect'`} Secured
+                Pre-Seed Funding
               </h3>
               <p className="mt-4 text-gray-600">
                 Just six months after winning the ATF AI Challenge, the team
@@ -1119,7 +1119,7 @@ export default function Home() {
                 className="h-16 w-auto mb-4 brightness-0 invert"
               />
               <p className="text-gray-400">
-                Empowering Africa's next generation of innovators since 1988.
+                {`Empowering Africa's next generation of innovators since 1988.`}
               </p>
             </div>
             <div>
