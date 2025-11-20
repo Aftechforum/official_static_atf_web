@@ -52,6 +52,19 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // ATF Design System Colors
+        atf: {
+          orange: "#F75C2F",
+          teal: "#006B7D",
+          gold: "#F9A826",
+          emerald: "#10B981",
+          charcoal: "#2D3142",
+          offwhite: "#F8F9FA",
+        },
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

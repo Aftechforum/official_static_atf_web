@@ -6,12 +6,23 @@ import { RiInstagramFill } from "react-icons/ri";
 export const BLUR_FADE_DELAY = 0.15;
 
 export const siteConfig = {
-  name: "Official ATF Website",
-  // name: "African Technology Forum",
-  description: "Promoting Science and Technology in Africa",
-  // description: "Push the boundaries of what's possible in AI",
+  name: "African Technology Forum",
+  description:
+    "Empowering Africa's next generation of technology leaders and innovators since 1988",
   url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
-  keywords: ["ATF", "AI", "Challenge", "Africa", "Ghana", "Nigeria"],
+  keywords: [
+    "African Technology Forum",
+    "ATF",
+    "AI Challenge",
+    "Africa",
+    "Technology",
+    "Innovation",
+    "Research",
+    "University Chapters",
+    "Ghana",
+    "Nigeria",
+    "MIT",
+  ],
   links: {
     email: "info@africantechnologyforum.org",
     twitter: "#", // https://africantechnologyforum.org/
