@@ -138,12 +138,6 @@ export default function Home() {
               ATF Challenge
             </a>
             <a
-              href="#membership"
-              className="text-gray-600 hover:text-atf-teal transition"
-            >
-              Membership
-            </a>
-            <a
               href="#partnership"
               className="text-gray-600 hover:text-atf-teal transition"
             >
@@ -187,15 +181,15 @@ export default function Home() {
             Next Generation of Innovators
           </h1>
           <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-white/90">
-            Discover the reimagined ATF digital experience—designed to inspire,
-            connect, and accelerate African technology innovation.
+            Promoting the development of science and technology in Africa since
+            1988
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#challenge"
               className="bg-gradient-to-r from-atf-orange to-atf-gold text-white font-bold py-4 px-8 rounded-full hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center"
             >
-              Explore the Vision <ArrowRight className="ml-2" />
+              Join the Movement <ArrowRight className="ml-2" />
             </a>
           </div>
         </div>
@@ -206,13 +200,13 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <span className="text-atf-orange font-semibold text-sm uppercase tracking-wide">
-              Homepage Concept
+              Our Impact
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold font-poppins text-gray-800 mt-2 mb-4">
-              Engaging Entry Point
+              By the Numbers
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              A powerful first impression that drives users to action.
+              {`Decades of dedication to the African technology ecosystem, from our MIT origins to our current continental reach.`}
             </p>
           </div>
 
@@ -220,7 +214,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 mb-16">
             <div className="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="text-5xl font-extrabold font-poppins text-atf-orange mb-2">
-                35+
+                37+
               </div>
               <p className="text-gray-600 font-semibold">Years of Impact</p>
             </div>
@@ -232,7 +226,7 @@ export default function Home() {
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
               <div className="text-5xl font-extrabold font-poppins text-atf-gold mb-2">
-                400+
+                1000+
               </div>
               <p className="text-gray-600 font-semibold">
                 Challenge Participants
@@ -243,7 +237,7 @@ export default function Home() {
                 100+
               </div>
               <p className="text-gray-600 font-semibold">
-                Research Publications
+                Sci-Tech Journal Articles
               </p>
             </div>
           </div>
@@ -258,14 +252,13 @@ export default function Home() {
                 ATF AI Challenge
               </h3>
               <p className="text-gray-600 mb-4">
-                Our flagship program empowering African students to solve
-                real-world problems with AI.
+                Tackle problems in Health, Energy, Agriculture, and Education.
               </p>
               <a
                 href="#challenge"
                 className="text-atf-orange font-semibold hover:underline inline-flex items-center"
               >
-                Learn More <ArrowRight className="ml-1 w-4 h-4" />
+                View Challenge <ArrowRight className="ml-1 w-4 h-4" />
               </a>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
@@ -273,17 +266,16 @@ export default function Home() {
                 <Users className="w-8 h-8 text-atf-teal" />
               </div>
               <h3 className="text-2xl font-bold font-poppins text-gray-800 mb-3">
-                University Chapters
+                Student Chapters
               </h3>
               <p className="text-gray-600 mb-4">
-                Join a vibrant community of innovators at leading African
-                universities.
+                A network across Ashesi, UG, KNUST, and more.
               </p>
               <a
-                href="#membership"
+                href="#home"
                 className="text-atf-teal font-semibold hover:underline inline-flex items-center"
               >
-                Join a Chapter <ArrowRight className="ml-1 w-4 h-4" />
+                Find a Chapter <ArrowRight className="ml-1 w-4 h-4" />
               </a>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
@@ -294,14 +286,13 @@ export default function Home() {
                 Publications
               </h3>
               <p className="text-gray-600 mb-4">
-                Access decades of research and thought leadership on African
-                technology.
+                Explore the archives of our pioneering quarterly magazine.
               </p>
               <a
                 href="#publications"
                 className="text-atf-gold font-semibold hover:underline inline-flex items-center"
               >
-                Browse Archive <ArrowRight className="ml-1 w-4 h-4" />
+                Read Archives <ArrowRight className="ml-1 w-4 h-4" />
               </a>
             </div>
           </div>
@@ -326,15 +317,20 @@ export default function Home() {
               ATF AI Challenge 2025
             </h2>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto text-white/90 mb-8">
-              Empowering African students to build AI solutions that transform
-              their communities. $50,000 in prizes.
+              The 2025 challenge has concluded. Discover the innovators who
+              built AI solutions to transform their communities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-atf-orange to-atf-gold text-white font-bold py-4 px-10 rounded-full hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center">
-                Register Your Team <Rocket className="ml-2" />
-              </button>
+              <a
+                href="https://www.msn.com/en-xl/africa/ghana/young-innovators-transform-healthcare-through-ai-at-the-2025-atf-ai-challenge-awards/ar-AA1PNDrg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-atf-orange to-atf-gold text-white font-bold py-4 px-10 rounded-full hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center"
+              >
+                View Winners <Award className="ml-2" />
+              </a>
               <button className="bg-white text-atf-teal font-bold py-4 px-10 rounded-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                View 2024 Winners
+                Join 2026 Waitlist
               </button>
             </div>
           </div>
@@ -346,8 +342,8 @@ export default function Home() {
                 Real-World Impact
               </h3>
               <p className="text-white/90">
-                Build solutions that address healthcare, agriculture, education,
-                and more.
+                Tackle critical issues in healthcare, agriculture, and
+                education.
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20">
@@ -356,7 +352,7 @@ export default function Home() {
                 Expert Mentorship
               </h3>
               <p className="text-white/90">
-                Get guidance from leading African technologists and researchers.
+                1-on-1 guidance from global tech leaders and researchers.
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20">
@@ -365,8 +361,7 @@ export default function Home() {
                 Career Acceleration
               </h3>
               <p className="text-white/90">
-                Winners gain exposure to investors, job opportunities, and
-                funding.
+                Fast-track access to investors, jobs, and seed funding.
               </p>
             </div>
           </div>
@@ -381,209 +376,31 @@ export default function Home() {
                 <div className="w-16 h-16 bg-atf-orange rounded-full flex items-center justify-center mx-auto mb-3">
                   <Calendar className="w-8 h-8" />
                 </div>
-                <h4 className="font-bold text-lg mb-2">Registration Opens</h4>
-                <p className="text-white/80 text-sm">January 2025</p>
+                <h4 className="font-bold text-lg mb-2">Registration</h4>
+                <p className="text-white/80 text-sm">Closed</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-atf-gold rounded-full flex items-center justify-center mx-auto mb-3">
                   <Code className="w-8 h-8" />
                 </div>
                 <h4 className="font-bold text-lg mb-2">Hackathon</h4>
-                <p className="text-white/80 text-sm">March 2025</p>
+                <p className="text-white/80 text-sm">Ended</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-atf-emerald rounded-full flex items-center justify-center mx-auto mb-3">
                   <Star className="w-8 h-8" />
                 </div>
                 <h4 className="font-bold text-lg mb-2">Finals</h4>
-                <p className="text-white/80 text-sm">May 2025</p>
+                <p className="text-white/80 text-sm">Completed</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-white text-atf-teal rounded-full flex items-center justify-center mx-auto mb-3">
                   <Award className="w-8 h-8" />
                 </div>
-                <h4 className="font-bold text-lg mb-2">Awards Ceremony</h4>
-                <p className="text-white/80 text-sm">June 2025</p>
+                <h4 className="font-bold text-lg mb-2">Awards</h4>
+                <p className="text-white/80 text-sm">Winners Announced</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Membership Section */}
-      <section id="membership" className="py-20 px-6 bg-white">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-atf-teal font-semibold text-sm uppercase tracking-wide">
-              Membership
-            </span>
-            <h2 className="text-4xl md:text-5xl font-extrabold font-poppins text-gray-800 mt-2 mb-4">
-              Join the ATF Network
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {`Connect with a community of innovators, access exclusive
-              resources, and shape Africa's tech future.`}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {/* Student Membership */}
-            <div className="bg-gradient-to-br from-atf-offwhite to-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-atf-orange">
-              <GraduationCap className="w-12 h-12 text-atf-orange mb-4" />
-              <h3 className="text-2xl font-bold font-poppins text-gray-800 mb-3">
-                Student Member
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Perfect for undergraduate and graduate students
-              </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-5 h-5 text-atf-emerald mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    Access to all events and workshops
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-5 h-5 text-atf-emerald mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    ATF Challenge participation
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-5 h-5 text-atf-emerald mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    Networking opportunities
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-5 h-5 text-atf-emerald mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Publication access</span>
-                </li>
-              </ul>
-              <button className="w-full bg-gradient-to-r from-atf-orange to-atf-gold text-white font-bold py-3 px-6 rounded-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                Join as Student
-              </button>
-            </div>
-
-            {/* Professional Membership */}
-            <div className="bg-gradient-to-br from-atf-teal to-atf-teal/90 p-8 rounded-lg shadow-xl text-white transform scale-105 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-atf-gold text-atf-charcoal font-bold text-sm px-4 py-1 rounded-full">
-                Most Popular
-              </div>
-              <Briefcase className="w-12 h-12 text-atf-gold mb-4" />
-              <h3 className="text-2xl font-bold font-poppins mb-3">
-                Professional Member
-              </h3>
-              <p className="text-white/90 mb-6">
-                For working professionals and academics
-              </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-5 h-5 text-atf-gold mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Everything in Student</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-5 h-5 text-atf-gold mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Mentorship opportunities</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-5 h-5 text-atf-gold mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Speaking engagements</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-5 h-5 text-atf-gold mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Exclusive networking events</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-5 h-5 text-atf-gold mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Partnership opportunities</span>
-                </li>
-              </ul>
-              <button className="w-full bg-white text-atf-teal font-bold py-3 px-6 rounded-full hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-                Join as Professional
-              </button>
-            </div>
-
-            {/* Institutional Membership */}
-            <div className="bg-gradient-to-br from-atf-offwhite to-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-atf-teal">
-              <Globe className="w-12 h-12 text-atf-teal mb-4" />
-              <h3 className="text-2xl font-bold font-poppins text-gray-800 mb-3">
-                Institutional Partner
-              </h3>
-              <p className="text-gray-600 mb-6">
-                For universities and organizations
-              </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-5 h-5 text-atf-emerald mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    Everything in Professional
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-5 h-5 text-atf-emerald mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">
-                    Establish university chapter
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-5 h-5 text-atf-emerald mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Brand visibility</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="w-5 h-5 text-atf-emerald mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Custom programs</span>
-                </li>
-              </ul>
-              <button className="w-full border-2 border-atf-teal text-atf-teal font-bold py-3 px-6 rounded-full hover:bg-atf-teal hover:text-white transition-all duration-300">
-                Become a Partner
-              </button>
-            </div>
-          </div>
-
-          {/* Application Form Preview */}
-          <div className="max-w-2xl mx-auto bg-atf-offwhite p-8 rounded-lg">
-            <h3 className="text-2xl font-bold font-poppins text-gray-800 mb-6 text-center">
-              Quick Application
-            </h3>
-            <form className="space-y-4">
-              <div>
-                <label className="block text-gray-700 font-semibold mb-2">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-atf-teal focus:ring-2 focus:ring-atf-teal/20 outline-none transition"
-                  placeholder="Enter your name"
-                />
-              </div>
-              <div>
-                <label className="block text-gray-700 font-semibold mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-atf-teal focus:ring-2 focus:ring-atf-teal/20 outline-none transition"
-                  placeholder="your@email.com"
-                />
-              </div>
-              <div>
-                <label className="block text-gray-700 font-semibold mb-2">
-                  Membership Type
-                </label>
-                <select className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-atf-teal focus:ring-2 focus:ring-atf-teal/20 outline-none transition">
-                  <option>Student</option>
-                  <option>Professional</option>
-                  <option>Institutional</option>
-                </select>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-atf-orange to-atf-gold text-white font-bold py-4 px-6 rounded-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-              >
-                Submit Application
-              </button>
-            </form>
           </div>
         </div>
       </section>
@@ -596,14 +413,13 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <span className="text-atf-gold font-semibold text-sm uppercase tracking-wide">
-              Partnership Opportunities
+              Partner with
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold font-poppins mt-2 mb-4">
-              Partner with ATF
+              The Future of African Tech
             </h2>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Join leading organizations in advancing African technology
-              innovation.
+              {`Join leading organizations like 37 Military Hospital, Esoko, and KNUST in advancing innovation. We offer tailored partnership packages.`}
             </p>
           </div>
 
@@ -652,28 +468,28 @@ export default function Home() {
               Trusted by Leading Organizations
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-              <div className="bg-white/10 rounded-lg p-6 flex items-center justify-center h-24 w-40">
+              <div className="bg-white/10== rounded-lg p-6 flex items-center justify-center h-24 w-40">
                 <img
                   src="/supporters/knust - rail.png"
                   alt="KNUST"
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <div className="bg-white/10 rounded-lg p-6 flex items-center justify-center h-24 w-40">
+              <div className="bg-white/10== rounded-lg p-6 flex items-center justify-center h-24 w-40">
                 <img
                   src="/supporters/UoG.png"
                   alt="University of Ghana"
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <div className="bg-white/10 rounded-lg p-6 flex items-center justify-center h-24 w-40">
+              <div className="bg-white/10== rounded-lg p-6 flex items-center justify-center h-24 w-40">
                 <img
                   src="/supporters/indaba logo.png"
                   alt="Deep Learning Indaba"
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <div className="bg-white/10 rounded-lg p-6 flex items-center justify-center h-24 w-40">
+              <div className="bg-white/10== rounded-lg p-6 flex items-center justify-center h-24 w-40">
                 <img
                   src="/supporters/blossomlog.png"
                   alt="Blossom"
@@ -700,17 +516,24 @@ export default function Home() {
                 Our Story
               </span>
               <h2 className="text-4xl md:text-5xl font-extrabold font-poppins text-gray-800 mt-2 mb-6">
-                35+ Years of Innovation
+                The ATF Story
               </h2>
               <p className="text-lg text-gray-600 mb-4">
-                Founded at MIT in 1988, the Africa Technology Forum has been at
-                the forefront of advancing African technology innovation for
-                over three decades.
+                Founded in 1988 by students at MIT, the African Technology Forum
+                began with a singular mission: to ensure Africans were writing
+                the scientific history of Africa.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                What started as a small gathering of passionate technologists
-                has grown into a continental movement, with active chapters
-                across Africa and the diaspora.
+                What started as a quarterly magazine has evolved into a
+                continental movement bridging the gap between academic potential
+                and real-world impact.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                <strong>Mission:</strong> To promote the development of science
+                and technology in Africa.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                <strong>Offices:</strong> Accra, Ghana & Sylvania, Ohio, USA.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -766,8 +589,7 @@ export default function Home() {
                 Our Mission
               </h3>
               <p className="text-gray-600">
-                {`To empower Africa's next generation of technology leaders and
-                innovators`}
+                To promote the development of science and technology in Africa.
               </p>
             </div>
             <div className="text-center p-8 bg-atf-offwhite rounded-lg">
@@ -796,7 +618,7 @@ export default function Home() {
       {/* Publications Section */}
       <section
         id="publications"
-        className="py-20 px-6 bg-gradient-to-br from-gray-50 to-atf-offwhite"
+        className="hidden py-20 px-6 bg-gradient-to-br from-gray-50 to-atf-offwhite"
       >
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -913,23 +735,26 @@ export default function Home() {
       </section>
 
       {/* News & Blog Section */}
-      <section id="blog" className="py-20 px-6 bg-white">
+      <section
+        id="blog"
+        className="py-20 px-6 bg-white== bg-gradient-to-br from-gray-50 to-atf-offwhite"
+      >
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <span className="text-atf-orange font-semibold text-sm uppercase tracking-wide">
               News & Updates
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold font-poppins text-gray-800 mt-2 mb-4">
-              Latest from the ATF Community
+              Latest from ATF
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className=" hidden text-lg text-gray-600 max-w-2xl mx-auto">
               Success stories, announcements, and insights from across the
               African tech ecosystem.
             </p>
           </div>
 
           {/* Category Filters */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
+          <div className="hidden flex== flex-wrap justify-center gap-3 mb-12">
             <button
               onClick={() => setSelectedCategory("all")}
               className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
@@ -981,28 +806,23 @@ export default function Home() {
               </div>
             </div>
             <div className="p-8 md:p-12">
-              <span className="text-sm font-semibold text-atf-orange uppercase">
-                Success Story
-              </span>
               <h3 className="mt-2 text-3xl font-bold font-poppins text-gray-800 leading-tight">
-                From Challenge to Startup: How {`'Agri-Detect'`} Secured
-                Pre-Seed Funding
+                Announcing the Winners of the 2025 ATF AI Challenge
               </h3>
               <p className="mt-4 text-gray-600">
-                Just six months after winning the ATF AI Challenge, the team
-                behind Agri-Detect has successfully closed a $150,000 pre-seed
-                funding round.
+                Young innovators transform healthcare through AI at the African
+                Technology Forum Challenge. Discover the teams building AI
+                solutions that are changing their communities.
               </p>
-              <div className="mt-6 flex items-center">
-                <div className="w-12 h-12 bg-atf-charcoal rounded-full mr-4 flex items-center justify-center text-white font-bold">
-                  AM
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-800">Dr. Akua Mensah</p>
-                  <p className="text-sm text-gray-500">
-                    October 14, 2025 • 5 min read
-                  </p>
-                </div>
+              <div className="mt-6">
+                <a
+                  href="https://www.msn.com/en-xl/africa/ghana/young-innovators-transform-healthcare-through-ai-at-the-2025-atf-ai-challenge-awards/ar-AA1PNDrg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-atf-orange font-semibold hover:underline"
+                >
+                  Read Full Story <ArrowRight className="ml-2 w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>
@@ -1069,12 +889,11 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <Mail className="w-16 h-16 mx-auto mb-6 text-atf-gold" />
             <h2 className="text-4xl font-extrabold font-poppins mb-4">
-              Stay Connected with African Innovation
+              Stay Connected
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Subscribe to our newsletter for the latest news, event
-              invitations, and research highlights delivered straight to your
-              inbox.
+              Subscribe for the latest research highlights, event invitations,
+              and ecosystem news delivered straight to your inbox.
             </p>
             <form className="max-w-md mx-auto" onSubmit={handleSubscribe}>
               <div className="flex flex-col sm:flex-row gap-3">
@@ -1139,14 +958,6 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#membership"
-                    className="hover:text-atf-orange transition"
-                  >
-                    Membership
-                  </a>
-                </li>
-                <li>
                   <a href="#blog" className="hover:text-atf-orange transition">
                     News & Blog
                   </a>
@@ -1162,14 +973,6 @@ export default function Home() {
                     className="hover:text-atf-orange transition"
                   >
                     Partner with Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#membership"
-                    className="hover:text-atf-orange transition"
-                  >
-                    Become a Member
                   </a>
                 </li>
                 <li>
@@ -1189,15 +992,15 @@ export default function Home() {
               <ul className="space-y-3 text-gray-400">
                 <li className="flex items-start">
                   <MapPin className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>Cambridge, MA, USA</span>
+                  <span>Kokomlemle, Accra North, Ghana</span>
                 </li>
                 <li className="flex items-center">
                   <Mail className="w-5 h-5 mr-2 flex-shrink-0" />
-                  <span>info@atforum.org</span>
+                  <span>info@africantechnologyforum.org</span>
                 </li>
                 <li className="flex items-center">
                   <Phone className="w-5 h-5 mr-2 flex-shrink-0" />
-                  <span>+1 (617) 555-0100</span>
+                  <span>+233 302 234349</span>
                 </li>
               </ul>
             </div>
