@@ -237,7 +237,7 @@ export default function Home() {
                 100+
               </div>
               <p className="text-gray-600 font-semibold">
-                Sci-Tech Journal Articles
+                Sci-Tech Articles
               </p>
             </div>
           </div>
