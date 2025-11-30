@@ -236,9 +236,7 @@ export default function Home() {
               <div className="text-5xl font-extrabold font-poppins text-atf-emerald mb-2">
                 100+
               </div>
-              <p className="text-gray-600 font-semibold">
-                Sci-Tech Articles
-              </p>
+              <p className="text-gray-600 font-semibold">Sci-Tech Articles</p>
             </div>
           </div>
 
@@ -477,8 +475,8 @@ export default function Home() {
               </div>
               <div className="bg-white/10== rounded-lg p-6 flex items-center justify-center h-24 w-40">
                 <img
-                  src="/supporters/UoG.png"
-                  alt="University of Ghana"
+                  src="/partners/korle bu original.png"
+                  alt="Korle Bu Teaching Hospital"
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
@@ -737,7 +735,7 @@ export default function Home() {
       {/* News & Blog Section */}
       <section
         id="blog"
-        className="py-20 px-6 bg-white== bg-gradient-to-br from-gray-50 to-atf-offwhite"
+        className="py-20 px-6 bg-white== hidden bg-gradient-to-br from-gray-50 to-atf-offwhite"
       >
         <div className="container mx-auto">
           <div className="text-center mb-16">
