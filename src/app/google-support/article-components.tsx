@@ -538,8 +538,8 @@ export const SubscribePartnershipCard = () => {
                 Partnership Opportunities
               </h2>
               <p className="text-gray-800 leading-relaxed mb-6 text-center">
-                Join us in empowering the next generation of African innovators.
-                Let's build together.
+                {`Join us in empowering the next generation of African innovators.
+                Let's build together.`}
               </p>
 
               <form
