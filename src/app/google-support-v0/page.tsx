@@ -111,11 +111,11 @@ function ChallengeOpportunitySection() {
           </p>
           <div className="pt-6 max-w-4xl mx-auto">
             <p className="text-lg text-gray-700 leading-relaxed">
-              Africa's greatest resource is its human talent, but a critical gap
+              {`Africa's greatest resource is its human talent, but a critical gap
               exists between education and employment. The ATF AI Challenge is
               our solution. We are building the continent's largest, most
               advanced talent pipeline to ensure the next generation doesn't
-              just consume AI, but builds it,{" "}
+              just consume AI, but builds it, `}
               <span className="font-bold text-atf-teal">
                 for Africa, by Africans.
               </span>
@@ -243,12 +243,12 @@ function PartnershipSection() {
           <div className="space-y-4">
             <div className="bg-atf-offwhite rounded-lg p-8 h-full">
               <h4 className="text-2xl font-bold text-atf-teal mb-4">
-                ATF's 37-Year History
+                {`ATF's 37-Year History`}
               </h4>
               <p className="text-gray-700 leading-relaxed">
-                We aren't a startup. The African Technology Forum's deep-rooted
+                {`We aren't a startup. The African Technology Forum's deep-rooted
                 university and industry networks, built since 1988, provide the
-                stability and access to make this scale-up possible.
+                stability and access to make this scale-up possible.`}
               </p>
             </div>
           </div>
@@ -257,12 +257,12 @@ function PartnershipSection() {
           <div className="space-y-4">
             <div className="bg-atf-offwhite rounded-lg p-8 h-full">
               <h4 className="text-2xl font-bold text-atf-orange mb-4">
-                Google.org's $1M Support
+                {`Google.org's $1M Support`}
               </h4>
               <p className="text-gray-700 leading-relaxed">
-                This funding is an accelerant, allowing us to dedicate 19
+                {`This funding is an accelerant, allowing us to dedicate 19
                 full-time staff to provide the intensive, high-touch mentorship
-                that sets our program apart from any online course.
+                that sets our program apart from any online course.`}
               </p>
             </div>
           </div>
@@ -295,7 +295,7 @@ function GetInvolvedSection() {
             The Future is Collaborative. Join Us.
           </p>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            We are actively seeking partners to help shape Africa's AI future.
+            {`We are actively seeking partners to help shape Africa's AI future.`}
           </p>
         </div>
 

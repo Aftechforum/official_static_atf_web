@@ -93,21 +93,21 @@ export default function GoogleSupportPage() {
                     AI Education Gaps? Because it works.
                   </p>
                   <p className="text-lg text-gray-800 leading-relaxed mb-6">
-                    Since 1988, the African Technology Forum has been at the
+                    {`Since 1988, the African Technology Forum has been at the
                     forefront of bridging the technology gap across the African
                     continent. Now, with a historic $1 million investment from
                     Google.org, ATF is launching its most ambitious initiative
-                    yet: the ATF AI Challenge.
+                    yet: the ATF AI Challenge.`}
                   </p>
                   <p className="text-lg text-gray-800 leading-relaxed mb-6">
-                    The program aims to train more than 10,000 young innovators
+                    {`The program aims to train more than 10,000 young innovators
                     across four countries—Ghana, Kenya, Nigeria, and South
                     Africa—by supporting efforts to build AI literacy, foster
                     innovation, and create direct pathways from education to
                     employment. The ATF AI Challenge is a strategic investment
                     because it addresses the critical skills gap, strengthens
                     local tech ecosystems, and positions Africa's youth as
-                    builders—not just consumers—of AI technology.
+                    builders—not just consumers—of AI technology.`}
                   </p>
                 </div>
 
@@ -127,11 +127,11 @@ export default function GoogleSupportPage() {
                       Stage 1: The AI School
                     </h3>
                     <p className="text-gray-700 leading-relaxed">
-                      A free, 4-week virtual bootcamp serves as the entry point,
+                      {`A free, 4-week virtual bootcamp serves as the entry point,
                       welcoming 15,000 learners who gain foundational AI skills
                       and confidence. The school eliminates financial barriers
                       while providing structured, high-quality education that
-                      prepares participants for the next stage.
+                      prepares participants for the next stage.`}
                     </p>
                   </div>
 
@@ -140,12 +140,12 @@ export default function GoogleSupportPage() {
                       Stage 2: The AI Challenge
                     </h3>
                     <p className="text-gray-700 leading-relaxed">
-                      From the school's graduates, 10,000 participants form more
+                      {`From the school's graduates, 10,000 participants form more
                       than 2,500 teams. These teams are mentored by industry
                       experts as they build functional AI-powered solutions to
                       address real-world problems identified by institutional
                       partners. This phase transforms theoretical knowledge into
-                      practical experience.
+                      practical experience.`}
                     </p>
                   </div>
 
@@ -174,22 +174,22 @@ export default function GoogleSupportPage() {
                     elements: institutional depth and strategic acceleration.
                   </p>
                   <p className="text-lg text-gray-800 leading-relaxed mb-6">
-                    ATF brings 37 years of established relationships with
+                    {`ATF brings 37 years of established relationships with
                     universities and industry across Africa. These aren't new
                     connections being built from scratch—they're mature networks
                     that provide immediate access to talent, venues, and
                     institutional support. The organization's longevity offers
-                    stability and credibility that startups typically lack.
+                    stability and credibility that startups typically lack.`}
                   </p>
                   <p className="text-lg text-gray-800 leading-relaxed mb-6">
-                    Google.org's $1 million investment serves as an accelerant,
+                    {`Google.org's $1 million investment serves as an accelerant,
                     enabling ATF to dedicate 19 full-time staff members to
                     provide intensive, personalized mentorship. This level of
                     human investment distinguishes the program from massive open
                     online courses or purely digital platforms. The funding
                     transforms capacity from volunteer-driven to professionally
                     staffed, ensuring consistent quality and meaningful guidance
-                    for every participant.
+                    for every participant.`}
                   </p>
                 </div>
 
@@ -199,21 +199,21 @@ export default function GoogleSupportPage() {
                     Addressing Africa's Critical Skills Gap
                   </h2>
                   <p className="text-lg text-gray-800 leading-relaxed mb-6">
-                    Africa's greatest resource is its human capital, but a
+                    {`Africa's greatest resource is its human capital, but a
                     persistent gap exists between educational achievement and
                     employment opportunity. University graduates often lack
                     practical experience with emerging technologies, while
                     employers struggle to find candidates with job-ready AI
-                    skills.
+                    skills.`}
                   </p>
                   <p className="text-lg text-gray-800 leading-relaxed mb-6">
-                    The ATF AI Challenge directly addresses this disconnect. By
+                    {`The ATF AI Challenge directly addresses this disconnect. By
                     providing hands-on project experience, expert mentorship,
                     and direct employer connections, the program creates a
                     structured pathway that traditional education systems
                     haven't established. Participants don't just learn about
                     AI—they build with it, solving real problems for real
-                    organizations.
+                    organizations.`}
                   </p>
                 </div>
 
@@ -223,21 +223,21 @@ export default function GoogleSupportPage() {
                     Building Africa's AI Future
                   </h2>
                   <p className="text-lg text-gray-800 leading-relaxed mb-6">
-                    The 2026 cohort represents more than a training program—it's
+                    {`The 2026 cohort represents more than a training program—it's
                     an investment in ensuring that Africa's next generation
                     doesn't merely consume AI technology but actively shapes it.
                     When African innovators build AI solutions for African
                     contexts, they create tools that genuinely address local
                     needs, reflect local values, and generate local economic
-                    value.
+                    value.`}
                   </p>
                   <p className="text-lg text-gray-800 leading-relaxed mb-6">
-                    This matters because AI development worldwide often
+                    {`This matters because AI development worldwide often
                     overlooks African perspectives, languages, and challenges.
                     By training thousands of African AI developers, the ATF AI
                     Challenge helps ensure that the continent's 1.4 billion
                     people are represented in the technologies that will shape
-                    the coming decades.
+                    the coming decades.`}
                   </p>
                 </div>
 
@@ -247,12 +247,12 @@ export default function GoogleSupportPage() {
                     Get Involved
                   </h2>
                   <p className="text-gray-800 leading-relaxed mb-6">
-                    Registrations for the 2026 AI School cohort will open in
+                    {`Registrations for the 2026 AI School cohort will open in
                     early 2026. The African Technology Forum is also actively
                     seeking university, corporate, and NGO partners to
                     participate in the program—whether by helping identify
                     talent, providing mentorship, or setting real-world
-                    challenges for teams to solve.
+                    challenges for teams to solve.`}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a
@@ -320,7 +320,7 @@ export default function GoogleSupportPage() {
                             37 Years
                           </div>
                           <div className="text-sm text-gray-600">
-                            ATF's history since 1988
+                            {`ATF's history since 1988`}
                           </div>
                         </div>
                       </div>
