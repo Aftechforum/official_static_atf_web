@@ -31,20 +31,20 @@ export const siteConfig = {
   },
   header: [
     {
-      href: "/#participate",
-      label: "Participate",
+      href: "/#challenge",
+      label: "ATF Challenge",
     },
     {
-      href: "/#about-us",
-      label: "About Us",
+      href: "/#partnership",
+      label: "Partnership",
     },
     {
-      href: "/#code-of-conduct",
-      label: "Code of Conduct",
+      href: "/#about",
+      label: "About ATF",
     },
     {
-      href: "/about-org",
-      label: "About Org",
+      href: "/google-support",
+      label: "News",
     },
   ],
   faqs: [

@@ -20,6 +20,7 @@ import {
   Star,
   Zap,
 } from "lucide-react";
+import Header from "@/components/sections/header";
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -113,9 +114,10 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 font-inter">
       {/* Navigation Bar */}
+      <Header />
       <nav
         // className="bg-white shadow-md sticky top-0 z-50"
-        className="sticky top-0 z-50 py-2== bg-background/60 backdrop-blur"
+        className="sticky== hidden top-0 z-50 py-2== bg-background/60 backdrop-blur"
       >
         <div className="container mx-auto px-6 py-2 flex justify-between items-center">
           <a href="#home" className="flex items-center">

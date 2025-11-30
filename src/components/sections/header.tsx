@@ -40,7 +40,7 @@ export default function Header() {
           title="brand-logo"
           className="relative mr-6 flex items-center space-x-2"
         >
-          <AftLogoWrapper className="h-[60px]" />
+          <AftLogoWrapper className="h-[60px]== h-12" />
 
           {/* <span className="font-bold text-xl">{siteConfig.name}</span> */}
         </Link>
