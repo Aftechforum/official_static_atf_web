@@ -42,7 +42,7 @@ export default function Header() {
         >
           <AftLogoWrapper className="h-[60px]" />
 
-          <span className="font-bold text-xl">{siteConfig.name}</span>
+          {/* <span className="font-bold text-xl">{siteConfig.name}</span> */}
         </Link>
 
         <div className="hidden lg:block">
