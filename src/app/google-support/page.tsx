@@ -56,17 +56,11 @@ export default function GoogleSupportPage() {
 
             {/* Article Metadata */}
             <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 pb-8 border-b border-gray-200">
-              <div
-                onClick={() => handleArticleContentChange("v0")}
-                className="flex items-center gap-2"
-              >
+              <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
                 <span>November 30, 2025</span>
               </div>
-              <div
-                onClick={() => handleArticleContentChange("v1")}
-                className="flex items-center gap-2"
-              >
+              <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
                 <span>8 min read</span>
               </div>
@@ -92,6 +86,18 @@ export default function GoogleSupportPage() {
             </div>
             <p className="text-sm text-gray-600 mt-3 text-center italic">
               ATF Challenge Winners 2024 & 2025 Cohorts
+              <span
+                onClick={() => {
+                  if (articleContent === "v0") handleArticleContentChange("v1");
+                  else handleArticleContentChange("v0");
+                }}
+                className="text-xs text-gray-500"
+              >
+                <span className="ml-4 text-xs font-semibold text-red-500 cursor-pointer hover:text-red-700">
+                  [DEV MODE] Toggle Article Content{" - "}
+                  {articleContent === "v0" ? "V1" : "V0"}
+                </span>
+              </span>
             </p>
           </div>
 

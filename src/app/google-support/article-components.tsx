@@ -337,7 +337,7 @@ export const ArticleContentV1 = () => {
 // Component for subscribing and partnership
 
 export const SubscribePartnershipCard = () => {
-  const [isFlipped, setIsFlipped] = useState(true);
+  const [isFlipped, setIsFlipped] = useState(false);
 
   // Subscribe form state
   const [subscribeEmail, setSubscribeEmail] = useState("");
@@ -358,6 +358,9 @@ export const SubscribePartnershipCard = () => {
   const handleSubscribe = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    // Clear previous messages
+    setSubscribeMessage("");
+
     // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(subscribeEmail)) {
@@ -366,18 +369,42 @@ export const SubscribePartnershipCard = () => {
       return;
     }
 
-    // Mock API call - log to console
-    console.log("Subscribe form submitted:", { email: subscribeEmail });
+    try {
+      // Submit to API
+      const response = await fetch(
+        "https://atf-emails-buckket.up.railway.app/emails",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email: subscribeEmail.trim() }),
+        }
+      );
 
-    // Simulate API delay and success
-    setSubscribeMessage("Processing...");
-    setSubscribeMessageType("success");
+      const data = await response.json();
 
-    setTimeout(() => {
-      setSubscribeMessage("Successfully subscribed! Check your inbox.");
-      setSubscribeMessageType("success");
-      setSubscribeEmail("");
-    }, 500);
+      if (response.ok && data.success) {
+        // Success - clear form and show message
+        setSubscribeEmail("");
+        setSubscribeMessage(
+          data.message || "Successfully subscribed to our newsletter!"
+        );
+        setSubscribeMessageType("success");
+      } else {
+        // API returned error
+        setSubscribeMessage(
+          data.message || "Failed to subscribe. Please try again."
+        );
+        setSubscribeMessageType("error");
+      }
+    } catch (error) {
+      // Network or other error
+      setSubscribeMessage(
+        "An error occurred. Please check your connection and try again."
+      );
+      setSubscribeMessageType("error");
+    }
   };
 
   const handlePartnership = async (e: FormEvent<HTMLFormElement>) => {
