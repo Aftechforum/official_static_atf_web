@@ -11,8 +11,6 @@ import {
   Target,
   Globe,
   Code,
-  Briefcase,
-  GraduationCap,
   Heart,
   Mail,
   MapPin,
@@ -115,8 +113,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 font-inter">
       {/* Navigation Bar */}
-      <nav className="bg-white shadow-md sticky top-0 z-50">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+      <nav
+        // className="bg-white shadow-md sticky top-0 z-50"
+        className="sticky top-0 z-50 py-2== bg-background/60 backdrop-blur"
+      >
+        <div className="container mx-auto px-6 py-2 flex justify-between items-center">
           <a href="#home" className="flex items-center">
             <img
               src="/atf-logo-vector.svg"
@@ -150,7 +151,7 @@ export default function Home() {
               About
             </a>
             <a
-              href="#blog"
+              href="/google-support"
               className="text-gray-600 hover:text-atf-teal transition"
             >
               News
@@ -170,10 +171,24 @@ export default function Home() {
         id="home"
         className="relative bg-gradient-to-br from-atf-teal to-atf-teal/80 text-white py-32 px-6 overflow-hidden"
       >
-        <div className="absolute inset-0 opacity-10">
+        {/* Background Image Container */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <img
+            src="/atf-award-ceremony-2024.png"
+            alt="African Technology Forum"
+            className="w-full h-full object-cover"
+          />
+          {/* Dark overlay for text legibility */}
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        {/* Decorative gradient blobs */}
+        <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 right-20 w-96 h-96 bg-atf-orange rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 left-20 w-96 h-96 bg-atf-gold rounded-full blur-3xl"></div>
         </div>
+
+        {/* Content */}
         <div className="container mx-auto text-center relative z-10">
           <h1 className="text-5xl md:text-7xl font-extrabold font-poppins mb-6 leading-tight">
             {`Empowering Africa's`}
@@ -186,10 +201,10 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="#challenge"
+              href="/google-support"
               className="bg-gradient-to-r from-atf-orange to-atf-gold text-white font-bold py-4 px-8 rounded-full hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center"
             >
-              Join the Movement <ArrowRight className="ml-2" />
+              Learn More <ArrowRight className="ml-2" />
             </a>
           </div>
         </div>
