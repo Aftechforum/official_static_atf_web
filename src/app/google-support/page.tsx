@@ -196,7 +196,7 @@ export default function GoogleSupportPage() {
                 {/* Section: The Gap It Fills */}
                 <div className="mb-10">
                   <h2 className="text-3xl font-bold font-poppins text-gray-900 mb-4">
-                    Addressing Africa's Critical Skills Gap
+                    {`Addressing Africa's Critical Skills Gap`}
                   </h2>
                   <p className="text-lg text-gray-800 leading-relaxed mb-6">
                     {`Africa's greatest resource is its human capital, but a
@@ -220,7 +220,7 @@ export default function GoogleSupportPage() {
                 {/* Section: Looking Forward */}
                 <div className="mb-10">
                   <h2 className="text-3xl font-bold font-poppins text-gray-900 mb-4">
-                    Building Africa's AI Future
+                    {`Building Africa's AI Future`}
                   </h2>
                   <p className="text-lg text-gray-800 leading-relaxed mb-6">
                     {`The 2026 cohort represents more than a training program—it's
