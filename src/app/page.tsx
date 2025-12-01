@@ -115,25 +115,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 font-inter">
       {/* Navigation Bar */}
-      <Header />
-
-      {/* Breadcrumb */}
-      <div className="border-b border-gray-200">
-        <div className="container mx-auto px-4 py-2 max-w-7xl text-center flex items-center justify-center">
-          <nav className="text-sm text-gray-600 text-center flex items-center mx-auto gap-2">
-            <span className="text-gray-900 font-bold">
-              📣 The Future of African AI is Here
-            </span>
-            <span className="text-gray-700 text-sm">
-              The African Technology Forum, with $1M in support from
-              Google.org...
-            </span>
-            <span className="font-bold text-atf-teal px-4 py-1 underline cursor-pointer">
-              <Link href="/google-support">Read more</Link>
-            </span>
-          </nav>
-        </div>
-      </div>
+      <Header showBanner={true} />
 
       {/* Hero Section */}
       <section
