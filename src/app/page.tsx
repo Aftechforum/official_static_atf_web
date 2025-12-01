@@ -152,7 +152,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/google-support"
+              href="/#about"
               className="bg-gradient-to-r from-atf-orange to-atf-gold text-white font-bold py-4 px-8 rounded-full hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center"
             >
               Learn More <ArrowRight className="ml-2" />
@@ -274,7 +274,7 @@ export default function Home() {
         </div>
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
-            <span className="bg-atf-orange text-white font-semibold text-sm uppercase tracking-wide px-4 py-2 rounded-full inline-block mb-4">
+            <span className="bg-atf-orange text-white font-semibold text-sm uppercase tracking-wide px-4 py-2 rounded-full inline-block mb-4 mt-4">
               Flagship Program
             </span>
             <h2 className="text-4xl md:text-6xl font-extrabold font-poppins mb-6">
