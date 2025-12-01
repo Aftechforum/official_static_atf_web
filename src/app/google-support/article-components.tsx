@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useState, FormEvent } from "react";
 
 export const ArticleContent = () => {
@@ -84,44 +83,17 @@ export const ArticleContent = () => {
 
       <ATFGoogleLogo />
 
-      {/* Closing Section */}
-      <div className="bg-gradient-to-r from-atf-teal/10 to-atf-orange/10 border border-atf-teal/20 rounded-lg p-8 mb-10">
-        <h2 className="text-2xl font-bold font-poppins text-gray-900 mb-4">
-          Get Involved
-        </h2>
-        <p className="text-gray-800 leading-relaxed mb-6">
-          {`Registrations for the 2026 AI School cohort will open in
-        early 2026. The African Technology Forum is also actively
-        seeking university, corporate, and NGO partners to
-        participate in the program, whether by helping identify
-        talent, providing mentorship, or setting real-world
-        challenges for teams to solve.`}
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <a
-            href="#"
-            className="inline-block bg-atf-teal text-white font-semibold px-6 py-3 rounded-lg hover:bg-atf-teal/90 transition-colors text-center"
-          >
-            Learn About Student Registration
-          </a>
-          <a
-            href="#"
-            className="inline-block bg-white text-atf-teal border-2 border-atf-teal font-semibold px-6 py-3 rounded-lg hover:bg-atf-teal/5 transition-colors text-center"
-          >
-            Explore Partnership Opportunities
-          </a>
-        </div>
-      </div>
-
       <SubscribePartnershipCard />
     </div>
   );
 };
 
 // Component for subscribing and partnership
-
 export const SubscribePartnershipCard = () => {
-  const [isFlipped, setIsFlipped] = useState(false);
+  // Form state management
+  const [formState, setFormState] = useState<
+    "none" | "subscribe" | "partnership"
+  >("none");
 
   // Subscribe form state
   const [subscribeEmail, setSubscribeEmail] = useState("");
@@ -228,164 +200,147 @@ export const SubscribePartnershipCard = () => {
     }, 500);
   };
 
-  const toggleFlip = () => {
-    setIsFlipped(!isFlipped);
-    // Clear messages when flipping
+  const handleCancel = () => {
+    setFormState("none");
+    // Clear messages when canceling
     setSubscribeMessage("");
     setPartnerMessage("");
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto perspective-1000">
-      <div className="relative min-h-[600px]" style={{ perspective: "1000px" }}>
-        <motion.div
-          className="relative w-full h-full"
-          initial={false}
-          animate={{ rotateY: isFlipped ? 180 : 0 }}
-          transition={{
-            duration: 0.6,
-            type: "spring",
-            stiffness: 100,
-            damping: 20,
-          }}
-          style={{ transformStyle: "preserve-3d" }}
+    <div className="bg-gradient-to-r from-atf-teal/10 to-atf-orange/10 border border-atf-teal/20 rounded-lg p-8 mb-10">
+      {/* Get Involved Section - Always visible */}
+      <h2 className="text-2xl font-bold font-poppins text-gray-900 mb-4">
+        Get Involved
+      </h2>
+      <p className="text-gray-800 leading-relaxed mb-6">
+        {`Registrations for the 2026 AI School cohort will open in
+        early 2026. The African Technology Forum is also actively
+        seeking university, corporate, and NGO partners to
+        participate in the program, whether by helping identify
+        talent, providing mentorship, or setting real-world
+        challenges for teams to solve.`}
+      </p>
+
+      {/* CTA Buttons - Visible when no form is shown */}
+      {formState === "none" && (
+        <div className="flex flex-col sm:flex-row gap-4">
+          <button
+            onClick={() => setFormState("subscribe")}
+            className="inline-block bg-atf-teal text-white font-semibold px-6 py-3 rounded-lg hover:bg-atf-teal/90 transition-colors text-center"
+          >
+            Learn About Student Registration
+          </button>
+          <button
+            onClick={() => setFormState("partnership")}
+            className="inline-block bg-white text-atf-teal border-2 border-atf-teal font-semibold px-6 py-3 rounded-lg hover:bg-atf-teal/5 transition-colors text-center"
+          >
+            Explore Partnership Opportunities
+          </button>
+        </div>
+      )}
+
+      {/* Subscribe Form - Shown when formState is 'subscribe' */}
+      {formState === "subscribe" && (
+        <form className="max-w-md mx-auto" onSubmit={handleSubscribe}>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={subscribeEmail}
+              onChange={(e) => setSubscribeEmail(e.target.value)}
+              className="flex-1 px-6 py-4 rounded-full text-gray-800 border-0 focus:ring-4 focus:ring-atf-gold/30 outline-none"
+              required
+            />
+            <button
+              type="submit"
+              className="bg-gradient-to-r from-atf-orange to-atf-gold text-white px-8 py-4 rounded-full font-bold hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 whitespace-nowrap"
+            >
+              Subscribe
+            </button>
+          </div>
+          {subscribeMessage && (
+            <div
+              className={`mt-4 px-6 py-3 rounded-full text-center font-medium ${
+                subscribeMessageType === "success"
+                  ? "bg-green-100 text-green-800 border border-green-300"
+                  : "bg-red-100 text-red-800 border border-red-300"
+              }`}
+            >
+              {subscribeMessage}
+            </div>
+          )}
+          <div className="text-center mt-4">
+            <button
+              type="button"
+              onClick={handleCancel}
+              className="text-gray-600 hover:text-gray-900 font-medium underline transition-colors"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      )}
+
+      {/* Partnership Form - Shown when formState is 'partnership' */}
+      {formState === "partnership" && (
+        <form
+          className="max-w-md mx-auto space-y-4"
+          onSubmit={handlePartnership}
         >
-          {/* Front Side - Subscribe Form */}
-          <div
-            className="w-full"
-            style={{
-              backfaceVisibility: "hidden",
-              WebkitBackfaceVisibility: "hidden",
-            }}
+          <input
+            type="text"
+            placeholder="Your Name"
+            value={partnerName}
+            onChange={(e) => setPartnerName(e.target.value)}
+            className="w-full px-6 py-4 rounded-full text-gray-800 border-0 focus:ring-4 focus:ring-atf-gold/30 outline-none"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Institution Name"
+            value={partnerInstitution}
+            onChange={(e) => setPartnerInstitution(e.target.value)}
+            className="w-full px-6 py-4 rounded-full text-gray-800 border-0 focus:ring-4 focus:ring-atf-gold/30 outline-none"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email Address"
+            value={partnerEmail}
+            onChange={(e) => setPartnerEmail(e.target.value)}
+            className="w-full px-6 py-4 rounded-full text-gray-800 border-0 focus:ring-4 focus:ring-atf-gold/30 outline-none"
+            required
+          />
+          <button
+            type="submit"
+            className="w-full bg-gradient-to-r from-atf-orange to-atf-gold text-white px-8 py-4 rounded-full font-bold hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
           >
-            <div className="bg-gradient-to-r from-atf-teal/10 to-atf-orange/10 border border-atf-teal/20 rounded-lg p-8">
-              <h2 className="text-2xl font-bold font-poppins text-gray-900 mb-4 text-center">
-                Stay Connected
-              </h2>
-              <p className="text-gray-800 leading-relaxed mb-6 text-center">
-                Subscribe for the latest updates, event invitations, and news
-                delivered straight to your inbox.
-              </p>
+            Submit Partnership Request
+          </button>
 
-              <form className="max-w-md mx-auto" onSubmit={handleSubscribe}>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    value={subscribeEmail}
-                    onChange={(e) => setSubscribeEmail(e.target.value)}
-                    className="flex-1 px-6 py-4 rounded-full text-gray-800 border-0 focus:ring-4 focus:ring-atf-gold/30 outline-none"
-                    required
-                  />
-                  <button
-                    type="submit"
-                    className="bg-gradient-to-r from-atf-orange to-atf-gold text-white px-8 py-4 rounded-full font-bold hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 whitespace-nowrap"
-                  >
-                    Subscribe
-                  </button>
-                </div>
-                {subscribeMessage && (
-                  <div
-                    className={`mt-4 px-6 py-3 rounded-full text-center font-medium ${
-                      subscribeMessageType === "success"
-                        ? "bg-green-100 text-green-800 border border-green-300"
-                        : "bg-red-100 text-red-800 border border-red-300"
-                    }`}
-                  >
-                    {subscribeMessage}
-                  </div>
-                )}
-              </form>
-
-              <div className="text-center mt-6">
-                <button
-                  onClick={toggleFlip}
-                  className="text-atf-teal hover:text-atf-orange font-medium underline transition-colors"
-                >
-                  Are you a company or university? Partner with us.
-                </button>
-              </div>
+          {partnerMessage && (
+            <div
+              className={`mt-4 px-6 py-3 rounded-full text-center font-medium ${
+                partnerMessageType === "success"
+                  ? "bg-green-100 text-green-800 border border-green-300"
+                  : "bg-red-100 text-red-800 border border-red-300"
+              }`}
+            >
+              {partnerMessage}
             </div>
+          )}
+          <div className="text-center mt-4">
+            <button
+              type="button"
+              onClick={handleCancel}
+              className="text-gray-600 hover:text-gray-900 font-medium underline transition-colors"
+            >
+              Cancel
+            </button>
           </div>
-
-          {/* Back Side - Partnership Form */}
-          <div
-            className="w-full h-full absolute top-0 left-0"
-            style={{
-              backfaceVisibility: "hidden",
-              WebkitBackfaceVisibility: "hidden",
-              transform: "rotateY(180deg)",
-            }}
-          >
-            <div className="bg-gradient-to-r from-atf-orange/10 to-atf-gold/10 border border-atf-orange/20 rounded-lg p-8">
-              <h2 className="text-2xl font-bold font-poppins text-gray-900 mb-4 text-center">
-                Partnership Opportunities
-              </h2>
-              <p className="text-gray-800 leading-relaxed mb-6 text-center">
-                {`Join us in empowering the next generation of African innovators.
-                Let's build together.`}
-              </p>
-
-              <form
-                className="max-w-md mx-auto space-y-4"
-                onSubmit={handlePartnership}
-              >
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  value={partnerName}
-                  onChange={(e) => setPartnerName(e.target.value)}
-                  className="w-full px-6 py-4 rounded-full text-gray-800 border-0 focus:ring-4 focus:ring-atf-gold/30 outline-none"
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="Institution Name"
-                  value={partnerInstitution}
-                  onChange={(e) => setPartnerInstitution(e.target.value)}
-                  className="w-full px-6 py-4 rounded-full text-gray-800 border-0 focus:ring-4 focus:ring-atf-gold/30 outline-none"
-                  required
-                />
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  value={partnerEmail}
-                  onChange={(e) => setPartnerEmail(e.target.value)}
-                  className="w-full px-6 py-4 rounded-full text-gray-800 border-0 focus:ring-4 focus:ring-atf-gold/30 outline-none"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-atf-orange to-atf-gold text-white px-8 py-4 rounded-full font-bold hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
-                >
-                  Submit Partnership Request
-                </button>
-
-                {partnerMessage && (
-                  <div
-                    className={`mt-4 px-6 py-3 rounded-full text-center font-medium ${
-                      partnerMessageType === "success"
-                        ? "bg-green-100 text-green-800 border border-green-300"
-                        : "bg-red-100 text-red-800 border border-red-300"
-                    }`}
-                  >
-                    {partnerMessage}
-                  </div>
-                )}
-              </form>
-
-              <div className="text-center mt-6">
-                <button
-                  onClick={toggleFlip}
-                  className="text-atf-orange hover:text-atf-teal font-medium underline transition-colors"
-                >
-                  Looking to subscribe instead?
-                </button>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
+        </form>
+      )}
     </div>
   );
 };
