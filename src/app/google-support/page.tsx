@@ -11,7 +11,7 @@ import {
   GraduationCap,
   Building2,
 } from "lucide-react";
-import { ArticleContentV1, ArticleContentV0 } from "./article-components";
+import { ArticleContent } from "./article-components";
 import { useState } from "react";
 
 export default function GoogleSupportPage() {
@@ -75,14 +75,6 @@ export default function GoogleSupportPage() {
                 alt="ATF Challenge Winners 2024-2025"
                 className="w-full h-auto object-cover"
               />
-              {/* <BorderBeam
-                size={400}
-                duration={12}
-                delay={9}
-                borderWidth={1.5}
-                colorFrom="hsl(var(--primary))"
-                colorTo="hsl(var(--primary)/0)"
-              /> */}
             </div>
             <p className="text-sm text-gray-600 mt-3 text-center italic">
               ATF Challenge Winners 2024 & 2025 Cohorts
@@ -92,12 +84,7 @@ export default function GoogleSupportPage() {
                   else handleArticleContentChange("v0");
                 }}
                 className="text-xs text-gray-500"
-              >
-                <span className="ml-4 text-xs font-semibold text-red-500 cursor-pointer hover:text-red-700">
-                  [DEV MODE] Toggle Article Content{" - "}
-                  {articleContent === "v0" ? "V1" : "V0"}
-                </span>
-              </span>
+              ></span>
             </p>
           </div>
 
@@ -105,11 +92,7 @@ export default function GoogleSupportPage() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
               {/* Main Article Content */}
-              {articleContent === "v0" ? (
-                <ArticleContentV0 />
-              ) : (
-                <ArticleContentV1 />
-              )}
+              <ArticleContent />
 
               {/* Sidebar */}
               <aside className="lg:col-span-4">
@@ -149,7 +132,7 @@ export default function GoogleSupportPage() {
                             $1 Million
                           </div>
                           <div className="text-sm text-gray-600">
-                            Investment from Google.org
+                            Funding from Google.org
                           </div>
                         </div>
                       </div>
@@ -167,64 +150,23 @@ export default function GoogleSupportPage() {
                     </div>
                   </div>
 
-                  {/* Program Timeline */}
-                  <div className="bg-white border border-gray-200 rounded-lg p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4 pb-3 border-b border-gray-300">
-                      Program Timeline
-                    </h3>
-                    <div className="space-y-4">
-                      <div>
-                        <div className="font-semibold text-atf-teal">
-                          Early 2026
-                        </div>
-                        <div className="text-sm text-gray-600">
-                          Registration opens
-                        </div>
-                      </div>
-                      <div>
-                        <div className="font-semibold text-atf-teal">
-                          Week 1-4
-                        </div>
-                        <div className="text-sm text-gray-600">
-                          AI School bootcamp
-                        </div>
-                      </div>
-                      <div>
-                        <div className="font-semibold text-atf-teal">
-                          Month 2-4
-                        </div>
-                        <div className="text-sm text-gray-600">
-                          AI Challenge team projects
-                        </div>
-                      </div>
-                      <div>
-                        <div className="font-semibold text-atf-teal">
-                          Month 5
-                        </div>
-                        <div className="text-sm text-gray-600">
-                          Demo Days across 4 countries
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
                   {/* Partnership Logo */}
                   <div className="bg-white border border-gray-200 rounded-lg p-6">
                     <h3 className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-4">
                       Partners
                     </h3>
-                    <div className="space-y-4">
-                      <div className="text-lg font-bold text-atf-teal">
-                        African Technology Forum
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <div className="h-px bg-gray-300 flex-1"></div>
-                        <div className="text-gray-400 text-xs">×</div>
-                        <div className="h-px bg-gray-300 flex-1"></div>
-                      </div>
-                      <div className="text-lg font-bold text-atf-orange">
-                        Google.org
-                      </div>
+
+                    <div className="flex items-center gap-4">
+                      <img
+                        src="/atf-logo-vector.svg"
+                        alt="African Technology Forum"
+                        className="h-24 w-auto"
+                      />
+                      <img
+                        src="/google-logo-vector.svg"
+                        alt="Google.org"
+                        className="h-8 w-auto"
+                      />
                     </div>
                   </div>
                 </div>

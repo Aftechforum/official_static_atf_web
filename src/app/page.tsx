@@ -21,6 +21,7 @@ import {
   Zap,
 } from "lucide-react";
 import Header from "@/components/sections/header";
+import Link from "next/link";
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -115,58 +116,24 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 font-inter">
       {/* Navigation Bar */}
       <Header />
-      <nav
-        // className="bg-white shadow-md sticky top-0 z-50"
-        className="sticky== hidden top-0 z-50 py-2== bg-background/60 backdrop-blur"
-      >
-        <div className="container mx-auto px-6 py-2 flex justify-between items-center">
-          <a href="#home" className="flex items-center">
-            <img
-              src="/atf-logo-vector.svg"
-              alt="African Technology Forum"
-              className="h-12 w-auto"
-            />
-          </a>
-          <div className="hidden md:flex items-center space-x-6">
-            <a
-              href="#home"
-              className="text-gray-600 hover:text-atf-teal transition"
-            >
-              Home
-            </a>
-            <a
-              href="#challenge"
-              className="text-gray-600 hover:text-atf-teal transition"
-            >
-              ATF Challenge
-            </a>
-            <a
-              href="#partnership"
-              className="text-gray-600 hover:text-atf-teal transition"
-            >
-              Partnership
-            </a>
-            <a
-              href="#about"
-              className="text-gray-600 hover:text-atf-teal transition"
-            >
-              About
-            </a>
-            <a
-              href="/google-support"
-              className="text-gray-600 hover:text-atf-teal transition"
-            >
-              News
-            </a>
-          </div>
-          <a
-            href="#challenge"
-            className="bg-gradient-to-r from-atf-orange to-atf-gold text-white font-bold py-2 px-6 rounded-full hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
-          >
-            Get Involved
-          </a>
+
+      {/* Breadcrumb */}
+      <div className="border-b border-gray-200">
+        <div className="container mx-auto px-4 py-2 max-w-7xl text-center flex items-center justify-center">
+          <nav className="text-sm text-gray-600 text-center flex items-center mx-auto gap-2">
+            <span className="text-gray-900 font-bold">
+              📣 The Future of African AI is Here
+            </span>
+            <span className="text-gray-700 text-sm">
+              The African Technology Forum, with $1M in support from
+              Google.org...
+            </span>
+            <span className="font-bold text-atf-teal px-4 py-1 underline cursor-pointer">
+              <Link href="/google-support">Read more</Link>
+            </span>
+          </nav>
         </div>
-      </nav>
+      </div>
 
       {/* Hero Section */}
       <section
