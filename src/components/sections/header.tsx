@@ -73,14 +73,24 @@ export default function Header({
                   transform: translateX(0);
                 }
                 100% {
-                  transform: translateX(-50%);
+                  transform: translateX(-200%);
                 }
               }
               .animate-scroll {
-                animation: scroll-left 30s linear infinite;
+                animation: scroll-left 15s linear infinite;
               }
               .animate-scroll:hover {
                 animation-play-state: paused;
+              }
+              @media (min-width: 768px) {
+                @keyframes scroll-left {
+                  0% {
+                    transform: translateX(0);
+                  }
+                  100% {
+                    transform: translateX(-70%);
+                  }
+                }
               }
             `}</style>
             <div className="flex animate-scroll whitespace-nowrap">
