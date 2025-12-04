@@ -4,6 +4,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { cn, constructMetadata } from "@/lib/utils";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { PostHogProvider } from "@/components/PostHogProvider";
 
 export const metadata: Metadata = constructMetadata({});
 
@@ -40,15 +41,17 @@ export default function RootLayout({
           "min-h-screen bg-background antialiased w-full mx-auto scroll-smooth"
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem={false}
-        >
-          {children}
-          <ThemeToggle />
-          {/* <TailwindIndicator /> */}
-        </ThemeProvider>
+        <PostHogProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem={false}
+          >
+            {children}
+            <ThemeToggle />
+            {/* <TailwindIndicator /> */}
+          </ThemeProvider>
+        </PostHogProvider>
       </body>
     </html>
   );
