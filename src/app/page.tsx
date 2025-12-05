@@ -22,8 +22,12 @@ import {
 } from "lucide-react";
 import Header from "@/components/sections/header";
 import Link from "next/link";
+import { usePostHog } from "posthog-js/react";
 
 export default function Home() {
+  // PostHog hook for event tracking
+  const posthog = usePostHog();
+
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   // Newsletter subscription state
@@ -92,6 +96,13 @@ export default function Home() {
       const data = await response.json();
 
       if (response.ok && data.success) {
+        // Track PostHog event for successful newsletter subscription
+        posthog?.capture("newsletter_subscribed", {
+          page: "home",
+          form_type: "newsletter",
+          email_domain: email.split("@")[1],
+        });
+
         // Success - clear form and show message
         setEmail("");
         setMessage(

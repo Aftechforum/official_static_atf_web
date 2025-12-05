@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { usePostHog } from "posthog-js/react";
 
 export const ArticleContent = () => {
   return (
@@ -90,6 +91,9 @@ export const ArticleContent = () => {
 
 // Component for subscribing and partnership
 export const SubscribePartnershipCard = () => {
+  // PostHog hook for event tracking
+  const posthog = usePostHog();
+
   // Form state management
   const [formState, setFormState] = useState<
     "none" | "subscribe" | "partnership"
@@ -141,6 +145,13 @@ export const SubscribePartnershipCard = () => {
       const data = await response.json();
 
       if (response.ok && data.success) {
+        // Track PostHog event for successful newsletter subscription
+        posthog?.capture("newsletter_subscribed", {
+          page: "google-support",
+          form_type: "newsletter",
+          email_domain: subscribeEmail.split("@")[1],
+        });
+
         // Success - clear form and show message
         setSubscribeEmail("");
         setSubscribeMessage(
@@ -185,6 +196,14 @@ export const SubscribePartnershipCard = () => {
       name: partnerName,
       institution: partnerInstitution,
       email: partnerEmail,
+    });
+
+    // Track PostHog event for partnership form submission
+    posthog?.capture("partnership_form_submitted", {
+      page: "google-support",
+      form_type: "partnership",
+      institution_name: partnerInstitution,
+      email_domain: partnerEmail.split("@")[1],
     });
 
     // Simulate API delay and success
