@@ -231,7 +231,7 @@ export default function Home() {
               </p>
               <a
                 href="#challenge"
-                className="text-atf-orange font-semibold hover:underline inline-flex items-center"
+                className="text-atf-orange font-semibold hover:underline inline-flex=- items-center hidden"
               >
                 View Challenge <ArrowRight className="ml-1 w-4 h-4" />
               </a>
@@ -248,7 +248,7 @@ export default function Home() {
               </p>
               <a
                 href="#home"
-                className="text-atf-teal font-semibold hover:underline inline-flex items-center"
+                className="text-atf-teal font-semibold hover:underline inline-flex=- hidden items-center"
               >
                 Find a Chapter <ArrowRight className="ml-1 w-4 h-4" />
               </a>
@@ -265,7 +265,7 @@ export default function Home() {
               </p>
               <a
                 href="#publications"
-                className="text-atf-gold font-semibold hover:underline inline-flex items-center"
+                className="text-atf-gold font-semibold hover:underline inline-flex=- hidden items-center"
               >
                 Read Archives <ArrowRight className="ml-1 w-4 h-4" />
               </a>
@@ -304,7 +304,7 @@ export default function Home() {
               >
                 View Winners <Award className="ml-2" />
               </a>
-              <button className="bg-white text-atf-teal font-bold py-4 px-10 rounded-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <button className="bg-white text-atf-teal font-bold py-4 px-10 rounded-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hidden block=-">
                 Join 2026 Waitlist
               </button>
             </div>
@@ -475,7 +475,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <button className="bg-gradient-to-r from-atf-orange to-atf-gold text-white font-bold py-4 px-10 rounded-full hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 inline-flex items-center">
+            <button className="bg-gradient-to-r from-atf-orange to-atf-gold text-white font-bold py-4 px-10 rounded-full hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 inline-flex=- items-center hidden">
               Explore Partnership <ArrowRight className="ml-2" />
             </button>
           </div>
