@@ -127,7 +127,8 @@ function HeroImage() {
         // key={currentIndex}
         src={"/atf-award-ceremony-2024.png"}
         alt="atf-award-ceremony-2024"
-        // className="border rounded-lg shadow-lg max-w-screen-lg"
+        width={1200}
+        height={675}
         className="aspect-auto h-full w-full object-cover relative border rounded-lg shadow-lg"
         initial={{ opacity: 0, scale: 0.98 }}
         animate={{ opacity: 1, scale: 1 }}

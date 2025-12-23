@@ -272,6 +272,8 @@ export default function Features({
                   key={currentIndex}
                   src={data[currentIndex].image}
                   alt="feature"
+                  width={800}
+                  height={600}
                   className="aspect-auto h-full w-full object-cover relative border rounded-lg shadow-lg"
                   initial={{ opacity: 0, scale: 0.98 }}
                   animate={{ opacity: 1, scale: 1 }}

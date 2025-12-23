@@ -23,6 +23,7 @@ import {
 import Header from "@/components/sections/header";
 import Link from "next/link";
 import { usePostHog } from "posthog-js/react";
+import Image from "next/image";
 
 export default function Home() {
   // PostHog hook for event tracking
@@ -135,10 +136,13 @@ export default function Home() {
       >
         {/* Background Image Container */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <img
+          <Image
             src="/atf-award-ceremony-2024.png"
             alt="African Technology Forum"
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
           />
           {/* Dark overlay for text legibility */}
           <div className="absolute inset-0 bg-black/60"></div>

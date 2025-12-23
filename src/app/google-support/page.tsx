@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { ArticleContent } from "./article-components";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function GoogleSupportPage() {
   const [articleContent, setArticleContent] = useState<"v0" | "v1">("v0");
@@ -69,11 +70,14 @@ export default function GoogleSupportPage() {
 
           {/* Featured Image */}
           <div className="max-w-5xl mx-auto mb-12">
-            <div className="relative rounded-lg overflow-hidden shadow-lg">
-              <img
+            <div className="relative rounded-lg overflow-hidden shadow-lg aspect-video">
+              <Image
                 src="/ATF-Challenge-Winners-2024-2025.png"
                 alt="ATF Challenge Winners 2024-2025"
-                className="w-full h-auto object-cover"
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 1280px) 100vw, 1280px"
               />
             </div>
             <p className="text-sm text-gray-600 mt-3 text-center italic">
