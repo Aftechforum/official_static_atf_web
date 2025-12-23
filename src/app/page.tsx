@@ -137,7 +137,7 @@ export default function Home() {
         {/* Background Image Container */}
         <div className="absolute inset-0 flex items-center justify-center">
           <Image
-            src="/atf-award-ceremony-2024.png"
+            src="/atf-award-ceremony-2024.jpg"
             alt="African Technology Forum"
             fill
             className="object-cover"

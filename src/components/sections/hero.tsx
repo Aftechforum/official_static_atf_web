@@ -125,7 +125,7 @@ function HeroImage() {
     >
       <motion.img
         // key={currentIndex}
-        src={"/atf-award-ceremony-2024.png"}
+        src={"/atf-award-ceremony-2024.jpg"}
         alt="atf-award-ceremony-2024"
         width={1200}
         height={675}

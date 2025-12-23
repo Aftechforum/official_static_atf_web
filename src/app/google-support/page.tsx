@@ -72,7 +72,7 @@ export default function GoogleSupportPage() {
           <div className="max-w-5xl mx-auto mb-12">
             <div className="relative rounded-lg overflow-hidden shadow-lg aspect-video">
               <Image
-                src="/ATF-Challenge-Winners-2024-2025.png"
+                src="/ATF-Challenge-Winners-2024-2025.jpg"
                 alt="ATF Challenge Winners 2024-2025"
                 fill
                 className="object-cover"
