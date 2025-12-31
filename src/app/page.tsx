@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import {
   Users,
   Award,
@@ -22,108 +19,10 @@ import {
 } from "lucide-react";
 import Header from "@/components/sections/header";
 import Link from "next/link";
-import { usePostHog } from "posthog-js/react";
 import Image from "next/image";
+import NewsletterForm from "@/components/newsletter-form";
 
 export default function Home() {
-  // PostHog hook for event tracking
-  const posthog = usePostHog();
-
-  const [selectedCategory, setSelectedCategory] = useState("all");
-
-  // Newsletter subscription state
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [messageType, setMessageType] = useState<"success" | "error" | null>(
-    null
-  );
-
-  // Email validation function - extensible for future rules
-  const validateEmail = (
-    email: string
-  ): { isValid: boolean; error?: string } => {
-    // Trim whitespace
-    const trimmedEmail = email.trim();
-
-    // Check if empty
-    if (!trimmedEmail) {
-      return { isValid: false, error: "Email address is required" };
-    }
-
-    // Basic email format validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(trimmedEmail)) {
-      return { isValid: false, error: "Please enter a valid email address" };
-    }
-
-    // Future validation rules can be added here:
-    // - Minimum length check
-    // - Domain whitelist/blacklist
-    // - Disposable email detection
-    // - etc.
-
-    return { isValid: true };
-  };
-
-  // Handle newsletter subscription
-  const handleSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // Clear previous messages
-    setMessage("");
-    setMessageType(null);
-
-    // Validate email
-    const validation = validateEmail(email);
-    if (!validation.isValid) {
-      setMessage(validation.error || "Invalid email");
-      setMessageType("error");
-      return;
-    }
-
-    try {
-      // Submit to API
-      const response = await fetch(
-        "https://atf-emails-buckket.up.railway.app/emails",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email: email.trim() }),
-        }
-      );
-
-      const data = await response.json();
-
-      if (response.ok && data.success) {
-        // Track PostHog event for successful newsletter subscription
-        posthog?.capture("newsletter_subscribed", {
-          page: "home",
-          form_type: "newsletter",
-          email_domain: email.split("@")[1],
-        });
-
-        // Success - clear form and show message
-        setEmail("");
-        setMessage(
-          data.message || "Successfully subscribed to our newsletter!"
-        );
-        setMessageType("success");
-      } else {
-        // API returned error
-        setMessage(data.message || "Failed to subscribe. Please try again.");
-        setMessageType("error");
-      }
-    } catch (error) {
-      // Network or other error
-      setMessage(
-        "An error occurred. Please check your connection and try again."
-      );
-      setMessageType("error");
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gray-50 font-inter">
       {/* Navigation Bar */}
@@ -448,30 +347,38 @@ export default function Home() {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
               <div className="bg-white/10== rounded-lg p-6 flex items-center justify-center h-24 w-40">
-                <img
+                <Image
                   src="/supporters/knust - rail.png"
                   alt="KNUST"
+                  width={160}
+                  height={96}
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
               <div className="bg-white/10== rounded-lg p-6 flex items-center justify-center h-24 w-40">
-                <img
+                <Image
                   src="/partners/korle bu original.png"
                   alt="Korle Bu Teaching Hospital"
+                  width={160}
+                  height={96}
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
               <div className="bg-white/10== rounded-lg p-6 flex items-center justify-center h-24 w-40">
-                <img
+                <Image
                   src="/supporters/indaba logo.png"
                   alt="Deep Learning Indaba"
+                  width={160}
+                  height={96}
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
               <div className="bg-white/10== rounded-lg p-6 flex items-center justify-center h-24 w-40">
-                <img
+                <Image
                   src="/supporters/blossomlog.png"
                   alt="Blossom"
+                  width={160}
+                  height={96}
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
@@ -732,46 +639,18 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Category Filters */}
+          {/* Category Filters - Hidden but preserved for future use */}
           <div className="hidden flex== flex-wrap justify-center gap-3 mb-12">
-            <button
-              onClick={() => setSelectedCategory("all")}
-              className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
-                selectedCategory === "all"
-                  ? "bg-atf-teal text-white"
-                  : "bg-white border-2 border-gray-200 text-gray-700 hover:border-atf-teal"
-              }`}
-            >
+            <button className="px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-atf-teal text-white">
               All Posts
             </button>
-            <button
-              onClick={() => setSelectedCategory("success")}
-              className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
-                selectedCategory === "success"
-                  ? "bg-atf-teal text-white"
-                  : "bg-white border-2 border-gray-200 text-gray-700 hover:border-atf-teal"
-              }`}
-            >
+            <button className="px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-white border-2 border-gray-200 text-gray-700 hover:border-atf-teal">
               Success Stories
             </button>
-            <button
-              onClick={() => setSelectedCategory("chapter")}
-              className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
-                selectedCategory === "chapter"
-                  ? "bg-atf-teal text-white"
-                  : "bg-white border-2 border-gray-200 text-gray-700 hover:border-atf-teal"
-              }`}
-            >
+            <button className="px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-white border-2 border-gray-200 text-gray-700 hover:border-atf-teal">
               Chapter News
             </button>
-            <button
-              onClick={() => setSelectedCategory("research")}
-              className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
-                selectedCategory === "research"
-                  ? "bg-atf-teal text-white"
-                  : "bg-white border-2 border-gray-200 text-gray-700 hover:border-atf-teal"
-              }`}
-            >
+            <button className="px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-white border-2 border-gray-200 text-gray-700 hover:border-atf-teal">
               Research Highlights
             </button>
           </div>
@@ -874,34 +753,7 @@ export default function Home() {
               Subscribe for the latest research highlights, event invitations,
               and ecosystem news delivered straight to your inbox.
             </p>
-            <form className="max-w-md mx-auto" onSubmit={handleSubscribe}>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 px-6 py-4 rounded-full text-gray-800 border-0 focus:ring-4 focus:ring-atf-gold/30 outline-none"
-                />
-                <button
-                  type="submit"
-                  className="bg-gradient-to-r from-atf-orange to-atf-gold text-white px-8 py-4 rounded-full font-bold hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 whitespace-nowrap"
-                >
-                  Subscribe
-                </button>
-              </div>
-              {message && (
-                <div
-                  className={`mt-4 px-6 py-3 rounded-full text-center font-medium ${
-                    messageType === "success"
-                      ? "bg-green-100 text-green-800 border border-green-300"
-                      : "bg-red-100 text-red-800 border border-red-300"
-                  }`}
-                >
-                  {message}
-                </div>
-              )}
-            </form>
+            <NewsletterForm />
           </div>
         </div>
       </section>
@@ -911,9 +763,11 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <img
+              <Image
                 src="/atf-logo-vector.svg"
                 alt="African Technology Forum"
+                width={64}
+                height={64}
                 className="h-16 w-auto mb-4 brightness-0 invert"
               />
               <p className="text-gray-400">

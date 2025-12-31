@@ -76,8 +76,6 @@
     --chart-3: 0 0 83;
     --chart-4: 0 0 64;
     --chart-5: 27 87% 67%;
-    font-family: Inter, sans-serif;
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "salt";
   }
 
   .dark {
@@ -92,14 +90,8 @@
     @apply border-border;
   }
 
-  @supports (font-variation-settings: normal) {
-    :root {
-      font-family: InterVariable, sans-serif;
-      font-feature-settings: "cv02", "cv03", "cv04", "cv11", "salt";
-    }
-  }
-
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "salt";
   }
 }

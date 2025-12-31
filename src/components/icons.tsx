@@ -1,9 +1,19 @@
+import Image from "next/image";
+
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
-import atfSvg from "@/assets/svgs/atfLogo";
-
 export const Icons = {
-  atfLogo: atfSvg,
+  // Using external SVG file instead of inline (159KB -> 10KB)
+  atfLogo: () => (
+    <Image
+      src="/atf-logo-vector.svg"
+      alt="African Technology Forum"
+      width={200}
+      height={60}
+      priority
+      className="h-full w-auto"
+    />
+  ),
   genericLogo: (props: IconProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"

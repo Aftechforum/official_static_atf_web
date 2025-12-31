@@ -1,10 +1,24 @@
-// import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { cn, constructMetadata } from "@/lib/utils";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { PostHogProvider } from "@/components/PostHogProvider";
+import { Inter, Poppins } from "next/font/google";
+
+// Self-hosted fonts via next/font for better performance
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  display: "swap",
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = constructMetadata({});
 
@@ -22,23 +36,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
-          rel="stylesheet"
-        />
-        {/* <link rel="icon" href="/atf-logo-vector.svg" type="image/svg+xml" /> */}
-      </head>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={cn("scroll-smooth", inter.variable, poppins.variable)}
+    >
       <body
         className={cn(
-          "min-h-screen bg-background antialiased w-full mx-auto scroll-smooth"
+          "min-h-screen bg-background antialiased w-full mx-auto scroll-smooth",
+          inter.className
         )}
       >
         <PostHogProvider>
@@ -49,7 +55,6 @@ export default function RootLayout({
           >
             {children}
             <ThemeToggle />
-            {/* <TailwindIndicator /> */}
           </ThemeProvider>
         </PostHogProvider>
       </body>
