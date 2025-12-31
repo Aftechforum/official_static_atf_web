@@ -95,3 +95,32 @@
     font-feature-settings: "cv02", "cv03", "cv04", "cv11", "salt";
   }
 }
+
+/* Banner scroll animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll-left 15s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+@media (min-width: 768px) {
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-70%);
+    }
+  }
+}

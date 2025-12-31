@@ -161,14 +161,18 @@ export default function GoogleSupportPage() {
                     </h3>
 
                     <div className="flex items-center gap-4">
-                      <img
+                      <Image
                         src="/atf-logo-vector.svg"
                         alt="African Technology Forum"
+                        width={200}
+                        height={96}
                         className="h-24 w-auto"
                       />
-                      <img
+                      <Image
                         src="/google-logo-vector.svg"
                         alt="Google.org"
+                        width={100}
+                        height={32}
                         className="h-8 w-auto"
                       />
                     </div>

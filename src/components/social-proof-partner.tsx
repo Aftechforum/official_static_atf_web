@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const partners = [
   "37 military hospital.png",
   "BELA-LOGO-2-1-1-300x58.png",
@@ -16,9 +18,11 @@ export function SocialProofPartner() {
           <div className="relative mt-6">
             <div className="flex flex-wrap justify-center items-center gap-2">
               {partners.map((logo, idx) => (
-                <img
+                <Image
                   key={idx}
                   src={`/partners/${logo}`}
+                  width={160}
+                  height={80}
                   className="h-20= w-40 px-2 dark:brightness-0= dark:invert"
                   alt={logo}
                 />

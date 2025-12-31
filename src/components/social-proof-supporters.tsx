@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const supporters = [
   "knust - rail.png",
   "indaba logo.png",
@@ -18,18 +20,22 @@ export function SocialProofSupporters() {
               {supporters.map((logo, idx) => {
                 if (logo === "indaba logo.png") {
                   return (
-                    <img
+                    <Image
                       key={idx}
                       src={`/supporters/${logo}`}
+                      width={160}
+                      height={80}
                       className="w-40 px-2 invert dark:invert-0"
                       alt={logo}
                     />
                   );
                 } else {
                   return (
-                    <img
+                    <Image
                       key={idx}
                       src={`/supporters/${logo}`}
+                      width={160}
+                      height={80}
                       className="w-40 px-2 dark:invert"
                       alt={logo}
                     />

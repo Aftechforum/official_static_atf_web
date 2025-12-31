@@ -1,10 +1,22 @@
 import { ThemeProvider } from "@/components/theme-provider";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { cn, constructMetadata } from "@/lib/utils";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { PostHogProvider } from "@/components/PostHogProvider";
 import { Inter, Poppins } from "next/font/google";
+import dynamic from "next/dynamic";
+
+// Lazy load ThemeToggle to reduce initial JS bundle
+const ThemeToggle = dynamic(
+  () => import("@/components/theme-toggle").then((mod) => mod.ThemeToggle),
+  { ssr: false }
+);
+
+// Lazy load PostHogProvider - analytics not needed for initial render
+const PostHogProvider = dynamic(
+  () =>
+    import("@/components/PostHogProvider").then((mod) => mod.PostHogProvider),
+  { ssr: false }
+);
 
 // Self-hosted fonts via next/font for better performance
 const inter = Inter({

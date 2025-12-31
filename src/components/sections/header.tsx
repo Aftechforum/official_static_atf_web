@@ -3,7 +3,17 @@ import Menu from "@/components/menu";
 import Link from "next/link";
 import HeaderScrollBorder from "./header-scroll-border";
 import HeaderBanner from "./header-banner";
-import MobileDrawer from "./header-mobile-drawer";
+import dynamic from "next/dynamic";
+
+// Lazy load MobileDrawer - only needed on mobile interaction
+const MobileDrawer = dynamic(() => import("./header-mobile-drawer"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-6 h-6 flex items-center justify-center">
+      <span className="text-2xl">☰</span>
+    </div>
+  ),
+});
 
 export default function Header({
   showBanner = false,

@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { usePostHog } from "posthog-js/react";
+import Image from "next/image";
 
 export const ArticleContent = () => {
   return (
@@ -367,14 +368,18 @@ export const SubscribePartnershipCard = () => {
 export const ATFGoogleLogo = () => {
   return (
     <div className="flex flex-col items-center gap-4 mb-10">
-      <img
+      <Image
         src="/atf-logo-vector.svg"
         alt="African Technology Forum"
+        width={200}
+        height={96}
         className="h-24 w-auto"
       />
-      <img
+      <Image
         src="/google-logo-vector.svg"
         alt="Google.org"
+        width={100}
+        height={32}
         className="h-8 w-auto"
       />
     </div>

@@ -20,7 +20,20 @@ import {
 import Header from "@/components/sections/header";
 import Link from "next/link";
 import Image from "next/image";
-import NewsletterForm from "@/components/newsletter-form";
+import dynamic from "next/dynamic";
+
+// Lazy load NewsletterForm - below the fold, not needed for initial render
+const NewsletterForm = dynamic(() => import("@/components/newsletter-form"), {
+  ssr: false,
+  loading: () => (
+    <div className="max-w-md mx-auto">
+      <div className="flex flex-col sm:flex-row gap-3">
+        <div className="flex-1 h-14 bg-white/20 rounded-full animate-pulse" />
+        <div className="w-32 h-14 bg-white/30 rounded-full animate-pulse" />
+      </div>
+    </div>
+  ),
+});
 
 export default function Home() {
   return (
@@ -41,7 +54,10 @@ export default function Home() {
             fill
             className="object-cover"
             priority
+            fetchPriority="high"
             sizes="100vw"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIhAAAQMDBAMBAAAAAAAAAAAAAQIDBAAFEQYSITEHE0FR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAZEQACAwEAAAAAAAAAAAAAAAABAgADESH/2gAMAwEAAhEDEEEB/wBYXM"
           />
           {/* Dark overlay for text legibility */}
           <div className="absolute inset-0 bg-black/60"></div>
@@ -352,6 +368,7 @@ export default function Home() {
                   alt="KNUST"
                   width={160}
                   height={96}
+                  loading="lazy"
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
@@ -361,6 +378,7 @@ export default function Home() {
                   alt="Korle Bu Teaching Hospital"
                   width={160}
                   height={96}
+                  loading="lazy"
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
@@ -370,6 +388,7 @@ export default function Home() {
                   alt="Deep Learning Indaba"
                   width={160}
                   height={96}
+                  loading="lazy"
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
@@ -379,6 +398,7 @@ export default function Home() {
                   alt="Blossom"
                   width={160}
                   height={96}
+                  loading="lazy"
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
