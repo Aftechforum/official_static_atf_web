@@ -3,9 +3,17 @@ import Link from "next/link";
 import HeaderBanner from "./header-banner";
 import dynamic from "next/dynamic";
 
-// Lazy load Menu - uses Radix UI, not needed for initial render
+// Lazy load Menu - SSR enabled to preserve SEO and accessibility for navigation links
 const Menu = dynamic(() => import("@/components/menu"), {
-  ssr: false,
+  ssr: true,
+  loading: () => (
+    <nav className="flex items-center space-x-1">
+      {/* Lightweight skeleton matching navigation structure */}
+      {[1, 2, 3, 4].map((i) => (
+        <span key={i} className="h-10 w-20 px-4 py-2" />
+      ))}
+    </nav>
+  ),
 });
 
 // Lazy load HeaderScrollBorder - scroll listener not needed immediately
