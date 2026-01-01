@@ -4,13 +4,13 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons = {
   // Using external SVG file instead of inline (159KB -> 10KB)
+  // Removed priority - logo is smaller and less critical than hero image
   atfLogo: () => (
     <Image
       src="/atf-logo-vector.svg"
       alt="African Technology Forum"
       width={200}
       height={60}
-      priority
       className="h-full w-auto"
     />
   ),

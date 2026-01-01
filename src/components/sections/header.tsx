@@ -1,9 +1,17 @@
 import { AftLogoWrapper } from "@/components/icons";
-import Menu from "@/components/menu";
 import Link from "next/link";
-import HeaderScrollBorder from "./header-scroll-border";
 import HeaderBanner from "./header-banner";
 import dynamic from "next/dynamic";
+
+// Lazy load Menu - uses Radix UI, not needed for initial render
+const Menu = dynamic(() => import("@/components/menu"), {
+  ssr: false,
+});
+
+// Lazy load HeaderScrollBorder - scroll listener not needed immediately
+const HeaderScrollBorder = dynamic(() => import("./header-scroll-border"), {
+  ssr: false,
+});
 
 // Lazy load MobileDrawer - only needed on mobile interaction
 const MobileDrawer = dynamic(() => import("./header-mobile-drawer"), {

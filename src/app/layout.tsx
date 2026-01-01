@@ -53,6 +53,15 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("scroll-smooth", inter.variable, poppins.variable)}
     >
+      <head>
+        {/* Preload hero image to reduce LCP resource load delay */}
+        <link
+          rel="preload"
+          as="image"
+          href="/atf-award-ceremony-2024.jpg"
+          fetchPriority="high"
+        />
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background antialiased w-full mx-auto scroll-smooth",
