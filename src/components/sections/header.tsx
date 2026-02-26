@@ -38,7 +38,7 @@ export default function Header({
 }) {
   return (
     <header className="sticky top-0 z-50 bg-background/60 backdrop-blur">
-      <div className="flex justify-between items-center container py-2">
+      <div className="flex justify-between items-center container py-1">
         <Link
           href="/"
           title="brand-logo"

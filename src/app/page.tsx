@@ -92,7 +92,7 @@ export default function Home() {
       </section>
 
       {/* Homepage Concept */}
-      <section id="homepage" className="py-20 px-6 bg-atf-offwhite">
+      <section id="homepage" className="py-24 px-6 bg-atf-offwhite">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <span className="text-atf-orange font-semibold text-sm uppercase tracking-wide">
@@ -196,7 +196,7 @@ export default function Home() {
       {/* ATF AI Challenge Section */}
       <section
         id="challenge"
-        className="py-20 px-6 bg-gradient-to-br from-atf-teal/90 to-atf-teal text-white relative overflow-hidden"
+        className="py-24 px-6 bg-gradient-to-br from-atf-teal/90 to-atf-teal text-white relative overflow-hidden"
       >
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-atf-orange rounded-full blur-3xl"></div>
@@ -302,7 +302,7 @@ export default function Home() {
       {/* Partnership Section */}
       <section
         id="partnership"
-        className="py-20 px-6 bg-atf-charcoal text-white"
+        className="py-24 px-6 bg-atf-charcoal text-white"
       >
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -414,7 +414,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-6 bg-white">
+      <section id="about" className="py-24 px-6 bg-white">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <div>
@@ -524,7 +524,7 @@ export default function Home() {
       {/* Publications Section */}
       <section
         id="publications"
-        className="hidden py-20 px-6 bg-gradient-to-br from-gray-50 to-atf-offwhite"
+        className="hidden py-24 px-6 bg-gradient-to-br from-gray-50 to-atf-offwhite"
       >
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -643,7 +643,7 @@ export default function Home() {
       {/* News & Blog Section */}
       <section
         id="blog"
-        className="py-20 px-6 bg-white== hidden bg-gradient-to-br from-gray-50 to-atf-offwhite"
+        className="py-24 px-6 hidden bg-gradient-to-br from-gray-50 to-atf-offwhite"
       >
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -762,7 +762,7 @@ export default function Home() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-20 px-6 bg-atf-teal text-white">
+      <section className="py-24 px-6 bg-atf-teal text-white">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <Mail className="w-16 h-16 mx-auto mb-6 text-atf-gold" />
