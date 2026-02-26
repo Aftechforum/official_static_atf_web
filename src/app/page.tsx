@@ -205,27 +205,33 @@ export default function Home() {
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
             <span className="bg-atf-orange text-white font-semibold text-sm uppercase tracking-wide px-4 py-2 rounded-full inline-block mb-4 mt-4">
-              Flagship Program
+              Now Accepting Applications
             </span>
             <h2 className="text-4xl md:text-6xl font-extrabold font-poppins mb-6">
-              ATF AI Challenge 2025
+              Lead the AI Revolution in Africa
             </h2>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto text-white/90 mb-8">
-              The 2025 challenge has concluded. Discover the innovators who
-              built AI solutions to transform their communities.
+              Join 15,000+ young innovators in the continent&apos;s largest
+              hands-on AI program. Master AI skills, build real solutions, and
+              launch your tech career.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col items-center gap-4">
               <a
-                href="https://www.msn.com/en-xl/africa/ghana/young-innovators-transform-healthcare-through-ai-at-the-2025-atf-ai-challenge-awards/ar-AA1PNDrg"
+                href="https://www.atfchallenge.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-atf-orange to-atf-gold text-white font-bold py-4 px-10 rounded-full hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center"
               >
-                View Winners <Award className="ml-2" />
+                Apply for 2026 Challenge <ArrowRight className="ml-2" />
               </a>
-              <button className="bg-white text-atf-teal font-bold py-4 px-10 rounded-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300 hidden block=-">
-                Join 2026 Waitlist
-              </button>
+              <a
+                href="https://www.msn.com/en-xl/africa/ghana/young-innovators-transform-healthcare-through-ai-at-the-2025-atf-ai-challenge-awards/ar-AA1PNDrg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-white text-sm font-medium transition-colors inline-flex items-center"
+              >
+                See our 2025 winners <ArrowRight className="ml-1 w-4 h-4" />
+              </a>
             </div>
           </div>
 
@@ -257,43 +263,6 @@ export default function Home() {
               <p className="text-white/90">
                 Fast-track access to investors, jobs, and seed funding.
               </p>
-            </div>
-          </div>
-
-          {/* Challenge Timeline */}
-          <div className="mt-16 bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20">
-            <h3 className="text-3xl font-bold font-poppins mb-8 text-center">
-              Challenge Timeline
-            </h3>
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-atf-orange rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Calendar className="w-8 h-8" />
-                </div>
-                <h4 className="font-bold text-lg mb-2">Registration</h4>
-                <p className="text-white/80 text-sm">Closed</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-atf-gold rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Code className="w-8 h-8" />
-                </div>
-                <h4 className="font-bold text-lg mb-2">Hackathon</h4>
-                <p className="text-white/80 text-sm">Ended</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-atf-emerald rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Star className="w-8 h-8" />
-                </div>
-                <h4 className="font-bold text-lg mb-2">Finals</h4>
-                <p className="text-white/80 text-sm">Completed</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white text-atf-teal rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Award className="w-8 h-8" />
-                </div>
-                <h4 className="font-bold text-lg mb-2">Awards</h4>
-                <p className="text-white/80 text-sm">Winners Announced</p>
-              </div>
             </div>
           </div>
         </div>
